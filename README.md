@@ -33,4 +33,4 @@ It is hovever needed to enable the installation of "unsafe" apps from outside Go
 Remark: 
 
 I have collapsed the YoutubeExplode https://github.com/Tyrrrz/YoutubeExplode code into this projects  assembly
-to be able to debug it in Xamarin.Forms. 
+to be able to debug it in Xamarin.Forms. YoutubeExplode's license text is copied into its source code subfolder
