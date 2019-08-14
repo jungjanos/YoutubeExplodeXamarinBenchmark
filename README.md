@@ -28,7 +28,7 @@ High end phone (Pocophone F1 with Qualcomm Snapdragon 845), 10x invocations:
 INSTALLATION:
 
 The provided APK does not require any permission or access. 
-It is hovever needed to enable the installation of "unsafe" apps from outside Google Play.
+It is however needed to enable the installation of "unsafe" apps from outside Google Play.
 
 Remark: 
 
