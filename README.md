@@ -8,6 +8,7 @@ Benchmarks .GetVideoAsync(id) and .GetVideoMediaStreamInfosAsync(id) methods wit
 Youtube id-s.
 
 PERFORMANCE:
+
 Low end phone (Redmi 3S Prime with Qualcomm Snapdragon 430)
 10x invocations:
 
@@ -15,9 +16,11 @@ Low end phone (Redmi 3S Prime with Qualcomm Snapdragon 430)
 * .GetVideoMediaStreamInfosAsync() ~ 24sec
 
 Midrange phone (Redmi Note 5Pro with Qualcomm Snapdragon 636)
+
 soon...
 
 INSTALLATION:
+
 The provided APK does not require any permission or access. 
 It is hovever needed to enable the installation of "unsafe" apps from outside Google Play.
 
