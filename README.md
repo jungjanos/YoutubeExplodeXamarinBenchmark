@@ -10,6 +10,7 @@ Youtube id-s.
 PERFORMANCE:
 
 Low end phone (Redmi 3S Prime with Qualcomm Snapdragon 430)
+
 10x invocations:
 
 * .GetVideoAsync() ~ 40sec 
