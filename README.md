@@ -17,7 +17,8 @@ Low end phone (Redmi 3S Prime with Qualcomm Snapdragon 430), 10x invocations:
 * .GetVideoMediaStreamInfosAsync() ~ 24sec
 
 Midrange phone (Redmi Note 5Pro with Qualcomm Snapdragon 636)
-* soon...
+* .GetVideoAsync() ~ 25sec 
+* .GetVideoMediaStreamInfosAsync() ~ 19sec
 
 High end phone (Pocophone F1 with Qualcomm Snapdragon 845), 10x invocations:
 * .GetVideoAsync() ~ 21sec 
