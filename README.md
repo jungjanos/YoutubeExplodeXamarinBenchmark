@@ -12,16 +12,18 @@ Youtube id-s.
 
 PERFORMANCE:
 
-Low end phone (Redmi 3S Prime with Qualcomm Snapdragon 430)
-
-10x invocations:
-
+Low end phone (Redmi 3S Prime with Qualcomm Snapdragon 430), 10x invocations:
 * .GetVideoAsync() ~ 40sec 
 * .GetVideoMediaStreamInfosAsync() ~ 24sec
 
 Midrange phone (Redmi Note 5Pro with Qualcomm Snapdragon 636)
+* soon...
 
-soon...
+High end phone (Pocophone F1 with Qualcomm Snapdragon 845)
+* .GetVideoAsync() ~ 21sec 
+* .GetVideoMediaStreamInfosAsync() ~ 16sec
+
+
 
 INSTALLATION:
 
