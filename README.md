@@ -19,7 +19,7 @@ Low end phone (Redmi 3S Prime with Qualcomm Snapdragon 430), 10x invocations:
 Midrange phone (Redmi Note 5Pro with Qualcomm Snapdragon 636)
 * soon...
 
-High end phone (Pocophone F1 with Qualcomm Snapdragon 845)
+High end phone (Pocophone F1 with Qualcomm Snapdragon 845), 10x invocations:
 * .GetVideoAsync() ~ 21sec 
 * .GetVideoMediaStreamInfosAsync() ~ 16sec
 
