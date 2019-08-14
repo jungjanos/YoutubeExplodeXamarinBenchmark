@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamAppWithYtE.MainPage">
+
+    <StackLayout Orientation="Vertical"
+                 VerticalOptions="FillAndExpand">
+        <StackLayout 
+            Orientation="Horizontal"
+            HorizontalOptions="StartAndExpand">
+            
+            <Label Text="{Binding TotalNumber, StringFormat='Total#: {0}'}" HorizontalOptions="Start"/>
+            <Label Text="{Binding ActualNumber, StringFormat='current#: {0}'}" HorizontalOptions="Start"/>
+            <Label Text="{Binding NetTime, StringFormat='Total net time {0} ms'}" HorizontalOptions="StartAndExpand"/> 
+            
+
+        </StackLayout>
+
+        <StackLayout 
+            Orientation="Horizontal"
+            HorizontalOptions="StartAndExpand">            
+
+            <Button Text="GetVid()" Command="{Binding GetVideosCommand}"/>
+            <Button Text="GetVidMStrmNfs()" Command="{Binding GetStreamsCommand}"/>
+            <Button Text="Reset" Command="{Binding ResetCommand}"/>
+
+        </StackLayout>
+
+        <CollectionView             
+            ItemsSource="{Binding Results}"
+            SelectionMode="None"
+            VerticalOptions="FillAndExpand"
+            ItemSizingStrategy="MeasureFirstItem"            
+            >
+            
+            
+            <CollectionView.ItemTemplate>
+
+                <DataTemplate>
+
+                    <Frame BorderColor="Black"                           
+                           BackgroundColor="WhiteSmoke">
+
+                        <Grid 
+                        HorizontalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>                                
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="80"/>
+                            </Grid.ColumnDefinitions>
+
+
+                            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                            Text="{Binding Function}"/>
+
+                            <Label Grid.Row="1" Grid.Column="0"
+                            Text="{Binding Message}"
+                               LineBreakMode="TailTruncation"/>
+
+                            <Label Grid.Row="1" Grid.Column="1"
+                               VerticalOptions="End"
+                            Text="{Binding Delay, StringFormat='{0}ms'}"/>
+                        </Grid>
+                    </Frame>
+
+
+                    
+                    
+                </DataTemplate>                    
+                
+            </CollectionView.ItemTemplate>
+            
+            
+                
+            
+            
+        </CollectionView>        
+
+    </StackLayout>
+
+</ContentPage>

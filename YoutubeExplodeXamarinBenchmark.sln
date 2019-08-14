@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29201.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeExplodeXamarinBenchmark.Android", "XamAppWithYtE\XamAppWithYtE.Android\YoutubeExplodeXamarinBenchmark.Android.csproj", "{8DE987BF-4FEC-4DFF-92AB-E176F7E3C525}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoutubeExplodeXamarinBenchmark", "XamAppWithYtE\XamAppWithYtE\YoutubeExplodeXamarinBenchmark.csproj", "{7806AE99-12D2-40F3-9A60-5EFF3EC8749F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DE987BF-4FEC-4DFF-92AB-E176F7E3C525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DE987BF-4FEC-4DFF-92AB-E176F7E3C525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DE987BF-4FEC-4DFF-92AB-E176F7E3C525}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8DE987BF-4FEC-4DFF-92AB-E176F7E3C525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DE987BF-4FEC-4DFF-92AB-E176F7E3C525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DE987BF-4FEC-4DFF-92AB-E176F7E3C525}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7806AE99-12D2-40F3-9A60-5EFF3EC8749F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7806AE99-12D2-40F3-9A60-5EFF3EC8749F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7806AE99-12D2-40F3-9A60-5EFF3EC8749F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7806AE99-12D2-40F3-9A60-5EFF3EC8749F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7806AE99-12D2-40F3-9A60-5EFF3EC8749F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7806AE99-12D2-40F3-9A60-5EFF3EC8749F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7742B74-0013-450A-A4C0-6C01470B42F2}
+	EndGlobalSection
+EndGlobal
