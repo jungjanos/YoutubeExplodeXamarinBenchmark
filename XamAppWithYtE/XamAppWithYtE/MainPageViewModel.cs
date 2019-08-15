@@ -19,8 +19,20 @@ namespace XamAppWithYtE
     {
         private bool isRunning;
         private CancellationTokenSource _tcs;
+        private IEnumerable<string> _TargetTestset
+        {
+            get
+            {
+                if (SelectedTestset == nameof(Testdata.StandardTestVideoIds))
+                    return Testdata.StandardTestVideoIds();
+                else if (SelectedTestset == nameof(Testdata.MovieTrailerTestVideoIds))
+                    return Testdata.MovieTrailerTestVideoIds();
+                else
+                    throw new Exception("invalid testset");
+            }
+        }
 
-        public int TotalNumber { get; set; } = Testdata.GetVideoIds().Count();
+        public int TotalNumber { get; set; } = Testdata.StandardTestVideoIds().Count();
 
         private int _actualNumber;
         public int ActualNumber
@@ -29,30 +41,33 @@ namespace XamAppWithYtE
             set => SetProperty(ref _actualNumber, value);
         }
 
-        private int _netTime;
-        private ObservableCollection<ResultModel> _results;
+        private int _netTime;        
 
         public int NetTime
         {
             get => _netTime;
             set => SetProperty(ref _netTime, value);
         }
+        public string SelectedTestset { get; set; }
 
+        public IList<string> Testsets { get; private set;}
         public ICommand GetVideosCommand { get; private set; }
         public ICommand GetStreamsCommand { get; private set; }
         public ICommand ResetCommand { get; private set; }
+        public ObservableCollection<ResultModel> Results { get; private set; }
 
-
-        public ObservableCollection<ResultModel> Results
-        {
-            get => _results;
-            set => SetProperty(ref _results, value);
-        }
         private readonly YoutubeClient _youtubeClient;
 
         public MainPageViewModel(YoutubeClient youtubeClient)
         {
             _youtubeClient = youtubeClient;
+            Testsets = new List<string>
+            {
+                nameof(Testdata.StandardTestVideoIds),
+                nameof(Testdata.MovieTrailerTestVideoIds)
+            };
+            SelectedTestset = Testsets.First();
+
             Results = new ObservableCollection<ResultModel>();
 
             GetVideosCommand = new Command(async () =>
@@ -90,7 +105,6 @@ namespace XamAppWithYtE
                 NetTime = 0;
                 isRunning = false;
             });
-
         }
 
         private async Task OnGetVideos(CancellationToken cancellationToken)
@@ -100,7 +114,7 @@ namespace XamAppWithYtE
             Results.Clear();
 
             Stopwatch sw = new Stopwatch();
-            foreach (var id in Testdata.GetVideoIds())
+            foreach (var id in _TargetTestset)
             {
                 ResultModel current = null;
 
@@ -147,9 +161,8 @@ namespace XamAppWithYtE
             Results.Clear();
 
             Stopwatch sw = new Stopwatch();
-            foreach (var id in Testdata.GetVideoIds())
+            foreach (var id in _TargetTestset)
             {
-
                 ResultModel current = null;
 
                 if (cancellationToken.IsCancellationRequested)
@@ -172,7 +185,6 @@ namespace XamAppWithYtE
                 }
                 catch (Exception ex)
                 {
-
                     sw.Stop();
                     current = new ResultModel
                     {
@@ -185,7 +197,6 @@ namespace XamAppWithYtE
                 Results.Add(current);
                 ActualNumber++;
                 NetTime += (int)sw.ElapsedMilliseconds;
-
             }
         }
 

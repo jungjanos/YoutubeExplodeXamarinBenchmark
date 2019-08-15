@@ -8,12 +8,21 @@
 
     <StackLayout Orientation="Vertical"
                  VerticalOptions="FillAndExpand">
+        
+        <Picker HorizontalOptions="StartAndExpand"
+                Title="Select testset"
+                ItemsSource="{Binding Testsets}"
+                ItemDisplayBinding="{Binding .}"
+                SelectedItem="{Binding SelectedTestset}">
+            
+        </Picker>
+        
         <StackLayout 
             Orientation="Horizontal"
             HorizontalOptions="StartAndExpand">
             
             <Label Text="{Binding TotalNumber, StringFormat='Total#: {0}'}" HorizontalOptions="Start"/>
-            <Label Text="{Binding ActualNumber, StringFormat='current#: {0}'}" HorizontalOptions="Start"/>
+            <Label Text="{Binding ActualNumber, StringFormat='Done#: {0}'}" HorizontalOptions="Start"/>
             <Label Text="{Binding NetTime, StringFormat='Total net time {0} ms'}" HorizontalOptions="StartAndExpand"/> 
             
 
