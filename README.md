@@ -30,11 +30,11 @@ High end phone (Pocophone F1 with Qualcomm Snapdragon 845), 10x invocations (agg
 * .GetVideoMediaStreamInfosAsync() ~ 16sec
 
 
-PERFORMANCE - MovieTrailerTestVideoIds:
+PERFORMANCE - **MovieTrailerTestVideoIds:**
 
 Low end phone (Redmi 3S Prime with Qualcomm Snapdragon 430), 10x invocations (aggregated time):
-* .GetVideoAsync() ~ 48sec (result between 46-50sec)
-* .GetVideoMediaStreamInfosAsync() ~ 16,5sec (results between 16-17,5)
+* .GetVideoAsync() ~ **48sec (result between 46-50sec)**
+* .GetVideoMediaStreamInfosAsync() ~ **16,5sec (results between 16-17,5)**
 
 Midrange phone (Redmi Note 5Pro with Qualcomm Snapdragon 636), 10x invocations (aggregated time):
 * soon
